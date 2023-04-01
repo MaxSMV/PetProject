@@ -26,7 +26,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6j-g2-wM5">
                                 <rect key="frame" x="60" y="449" width="273" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH9-er-bih">
                                 <rect key="frame" x="137" y="126" width="119" height="36"/>
@@ -199,11 +199,11 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="john.doe@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSg-Qp-byA">
-                                <rect key="frame" x="66" y="401" width="169" height="21"/>
+                                <rect key="frame" x="66" y="401" width="261" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8bb-iP-S19"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -223,9 +223,9 @@
                                     <action selector="logoutClicked:" destination="pSs-EX-7hq" eventType="touchUpInside" id="Ekz-kC-pM6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: +380 00 00 00 000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZu-Rm-0sM">
-                                <rect key="frame" x="66" y="430" width="209" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone: +380 00 00 00 000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZu-Rm-0sM">
+                                <rect key="frame" x="66" y="430" width="261" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -252,7 +252,7 @@
                             <constraint firstItem="kPP-5R-GtC" firstAttribute="centerX" secondItem="x9e-AQ-hyi" secondAttribute="centerX" id="jNQ-wz-Xui"/>
                             <constraint firstItem="ZSg-Qp-byA" firstAttribute="top" secondItem="kPP-5R-GtC" secondAttribute="bottom" constant="73" id="sfb-No-uE7"/>
                             <constraint firstItem="ZSg-Qp-byA" firstAttribute="leading" secondItem="mZu-Rm-0sM" secondAttribute="leading" id="xFE-rD-XEj"/>
-                            <constraint firstItem="y5Q-4d-XkN" firstAttribute="trailing" secondItem="ZSg-Qp-byA" secondAttribute="trailing" constant="158" id="yKg-Qv-GxX"/>
+                            <constraint firstItem="y5Q-4d-XkN" firstAttribute="trailing" secondItem="ZSg-Qp-byA" secondAttribute="trailing" constant="66" id="yKg-Qv-GxX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="S4B-tt-CVl">
@@ -381,7 +381,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="MPd-vm-0bC">
-                        <imageReference key="image" image="house" catalog="system" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="house.fill" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color systemColor="labelColor"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -518,7 +518,7 @@
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="selectimage" width="360" height="360"/>
