@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         uploadImage.addGestureRecognizer(gestureRecognizer)
 
         if let email = userDataService.email {
-            emailLabel.text = email
+            emailLabel.text = "email: " + email
         }
 
         // make rounded image
