@@ -13,9 +13,11 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var shortDescriptionText: UITextView!
     
     private var movie: Movie?
     private let favoritesService = FavoritesService()
+    
     
     func configure(with movie: Movie, isFavorite: Bool) {
         self.movie = movie
@@ -23,6 +25,7 @@ class MovieTableViewCell: UITableViewCell {
         yearLabel.text = movie.releaseDate
         genreLabel.text = movie.primaryGenreName
         artworkImageView.image = nil
+        shortDescriptionText.text = movie.shortDescription
         favoriteButton.isSelected = isFavorite
         
         URLSession.shared.dataTask(with: movie.artworkUrl500) { (data, response, error) in

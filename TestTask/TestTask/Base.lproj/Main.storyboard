@@ -107,42 +107,62 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action &amp; Adventure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avY-3T-JaU">
-                                                    <rect key="frame" x="128" y="86" width="112" height="15"/>
+                                                    <rect key="frame" x="128" y="101" width="112" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Mar, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDN-28-Fif">
-                                                    <rect key="frame" x="128" y="101" width="64" height="12"/>
+                                                    <rect key="frame" x="128" y="116" width="64" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Girl in the Spider's WEB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA8-US-lVe">
-                                                    <rect key="frame" x="128" y="41" width="189" height="17"/>
+                                                    <rect key="frame" x="128" y="24" width="189" height="19"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcm-cG-BiV">
-                                                    <rect key="frame" x="335" y="96" width="38" height="22"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcm-cG-BiV">
+                                                    <rect key="frame" x="322.33333333333331" y="96" width="50.666666666666686" height="34.333333333333343"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system"/>
                                                     <connections>
                                                         <action selector="favoriteButtonTapped:" destination="Cor-xl-BTy" eventType="touchUpInside" id="P2r-pu-j8S"/>
                                                     </connections>
                                                 </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNq-qP-hFD">
+                                                    <rect key="frame" x="125.00000000000001" y="61" width="176.33333333333337" height="39"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="39" id="cuA-RU-RT0"/>
+                                                    </constraints>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oA8-US-lVe" firstAttribute="top" secondItem="1cC-eY-uyt" secondAttribute="topMargin" constant="30" id="ANS-XP-CXW"/>
+                                                <constraint firstItem="rNq-qP-hFD" firstAttribute="centerY" secondItem="1cC-eY-uyt" secondAttribute="centerY" constant="9.5" id="0Jk-ZG-hsX"/>
+                                                <constraint firstItem="oA8-US-lVe" firstAttribute="top" secondItem="1cC-eY-uyt" secondAttribute="topMargin" constant="13" id="ANS-XP-CXW"/>
                                                 <constraint firstItem="hDN-28-Fif" firstAttribute="top" secondItem="avY-3T-JaU" secondAttribute="bottom" id="B4o-eo-pGh"/>
-                                                <constraint firstItem="oA8-US-lVe" firstAttribute="leading" secondItem="avY-3T-JaU" secondAttribute="leading" id="BSD-Fv-lNx"/>
+                                                <constraint firstItem="tcm-cG-BiV" firstAttribute="leading" secondItem="rNq-qP-hFD" secondAttribute="trailing" constant="21" id="BmC-GT-3AA"/>
+                                                <constraint firstItem="tcm-cG-BiV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hDN-28-Fif" secondAttribute="trailing" constant="8" symbolic="YES" id="DtR-F0-gjK"/>
                                                 <constraint firstItem="tcm-cG-BiV" firstAttribute="top" secondItem="1cC-eY-uyt" secondAttribute="top" constant="96" id="HOI-uZ-tIx"/>
+                                                <constraint firstItem="rNq-qP-hFD" firstAttribute="top" secondItem="oA8-US-lVe" secondAttribute="bottom" constant="18" id="J1D-Or-26u"/>
+                                                <constraint firstItem="rNq-qP-hFD" firstAttribute="leading" secondItem="JyX-XF-xx6" secondAttribute="trailing" constant="5" id="J8Q-SS-Oua"/>
                                                 <constraint firstItem="JyX-XF-xx6" firstAttribute="leading" secondItem="1cC-eY-uyt" secondAttribute="leadingMargin" id="Kch-eK-BJM"/>
                                                 <constraint firstItem="JyX-XF-xx6" firstAttribute="top" secondItem="1cC-eY-uyt" secondAttribute="topMargin" constant="-1" id="WuE-yy-f8i"/>
-                                                <constraint firstItem="avY-3T-JaU" firstAttribute="top" secondItem="oA8-US-lVe" secondAttribute="bottom" constant="28" id="a8H-E5-eDs"/>
+                                                <constraint firstItem="hDN-28-Fif" firstAttribute="top" secondItem="rNq-qP-hFD" secondAttribute="bottom" constant="16" id="XYr-gT-nti"/>
+                                                <constraint firstAttribute="trailing" secondItem="oA8-US-lVe" secondAttribute="trailing" constant="76" id="am5-x8-vdJ"/>
+                                                <constraint firstItem="rNq-qP-hFD" firstAttribute="centerY" secondItem="1cC-eY-uyt" secondAttribute="centerY" constant="9.5" id="cba-cj-TCN"/>
+                                                <constraint firstItem="avY-3T-JaU" firstAttribute="leading" secondItem="oA8-US-lVe" secondAttribute="leading" id="h5Z-fS-YOs"/>
+                                                <constraint firstItem="tcm-cG-BiV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="avY-3T-JaU" secondAttribute="trailing" constant="8" symbolic="YES" id="mc9-YS-bGT"/>
                                                 <constraint firstAttribute="trailing" secondItem="tcm-cG-BiV" secondAttribute="trailing" constant="20" symbolic="YES" id="oeB-dO-CHK"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="JyX-XF-xx6" secondAttribute="bottom" constant="1" id="rh5-At-Am7"/>
+                                                <constraint firstItem="avY-3T-JaU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oA8-US-lVe" secondAttribute="leading" id="uzm-7y-QWs"/>
                                                 <constraint firstItem="oA8-US-lVe" firstAttribute="leading" secondItem="JyX-XF-xx6" secondAttribute="trailing" constant="8" symbolic="YES" id="wAX-zP-zCE"/>
                                                 <constraint firstItem="avY-3T-JaU" firstAttribute="leading" secondItem="hDN-28-Fif" secondAttribute="leading" id="wH1-fd-vKD"/>
                                             </constraints>
@@ -151,6 +171,7 @@
                                             <outlet property="artworkImageView" destination="JyX-XF-xx6" id="xWk-Bm-r59"/>
                                             <outlet property="favoriteButton" destination="tcm-cG-BiV" id="lIq-Fp-ru7"/>
                                             <outlet property="genreLabel" destination="avY-3T-JaU" id="Cos-Ja-diT"/>
+                                            <outlet property="shortDescriptionText" destination="rNq-qP-hFD" id="5Bx-zE-7BZ"/>
                                             <outlet property="titleLabel" destination="oA8-US-lVe" id="qKM-9I-zV9"/>
                                             <outlet property="yearLabel" destination="hDN-28-Fif" id="wHg-w2-lFe"/>
                                         </connections>
@@ -300,14 +321,14 @@
                                                         <constraint firstAttribute="width" constant="100" id="VOH-H2-n1I"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Girl in the Spider's WEB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hje-WB-abo">
-                                                    <rect key="frame" x="128" y="44" width="229" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Girl in the Spider's WEB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hje-WB-abo">
+                                                    <rect key="frame" x="128" y="21.333333333333258" width="229" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30 Mar, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdr-Ah-sMA">
-                                                    <rect key="frame" x="128" y="97" width="81" height="21"/>
+                                                    <rect key="frame" x="128" y="109" width="81" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -320,32 +341,47 @@
                                                         <action selector="favoriteButtonTapped:" destination="0er-xU-X1I" eventType="touchUpInside" id="VDB-Ou-4dh"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Action &amp; Adventure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-Nt-6Fs">
-                                                    <rect key="frame" x="128" y="83" width="131" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action &amp; Adventure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-Nt-6Fs">
+                                                    <rect key="frame" x="128" y="96" width="108.33333333333331" height="14.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfj-i7-gbB">
+                                                    <rect key="frame" x="125" y="56" width="176" height="39"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="sFA-2D-IB8" firstAttribute="bottom" secondItem="mqx-7M-zws" secondAttribute="bottomMargin" constant="-1" id="21h-HO-uao"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="FqY-p3-xPY" secondAttribute="trailing" constant="17" id="8y6-ib-fB6"/>
                                                 <constraint firstItem="sFA-2D-IB8" firstAttribute="top" secondItem="mqx-7M-zws" secondAttribute="topMargin" constant="-1" id="BNf-Tf-j1P"/>
-                                                <constraint firstItem="3gh-Nt-6Fs" firstAttribute="top" secondItem="mqx-7M-zws" secondAttribute="topMargin" constant="72" id="DyW-EX-G8t"/>
+                                                <constraint firstItem="3gh-Nt-6Fs" firstAttribute="top" secondItem="mqx-7M-zws" secondAttribute="topMargin" constant="85" id="DyW-EX-G8t"/>
                                                 <constraint firstItem="3gh-Nt-6Fs" firstAttribute="leading" secondItem="hje-WB-abo" secondAttribute="leading" id="REj-TW-AeL"/>
                                                 <constraint firstItem="3gh-Nt-6Fs" firstAttribute="leading" secondItem="sFA-2D-IB8" secondAttribute="trailing" constant="8" id="VaE-gl-P2f"/>
-                                                <constraint firstItem="hje-WB-abo" firstAttribute="top" secondItem="3gh-Nt-6Fs" secondAttribute="bottom" constant="-60" id="Vav-Rr-OV5"/>
+                                                <constraint firstItem="hje-WB-abo" firstAttribute="top" secondItem="3gh-Nt-6Fs" secondAttribute="bottom" constant="-89.000000000000071" id="Vav-Rr-OV5"/>
                                                 <constraint firstItem="sFA-2D-IB8" firstAttribute="leading" secondItem="mqx-7M-zws" secondAttribute="leadingMargin" id="YJ2-pI-y7U"/>
                                                 <constraint firstItem="FqY-p3-xPY" firstAttribute="top" secondItem="mqx-7M-zws" secondAttribute="topMargin" constant="86" id="cnw-J5-SR0"/>
                                                 <constraint firstItem="3gh-Nt-6Fs" firstAttribute="leading" secondItem="Xdr-Ah-sMA" secondAttribute="leading" id="euH-Xv-USi"/>
+                                                <constraint firstItem="Bfj-i7-gbB" firstAttribute="leading" secondItem="sFA-2D-IB8" secondAttribute="trailing" constant="5" id="foX-F4-SU2"/>
+                                                <constraint firstItem="Bfj-i7-gbB" firstAttribute="leading" secondItem="sFA-2D-IB8" secondAttribute="trailing" constant="5" id="lO9-F7-RaW"/>
                                                 <constraint firstItem="hje-WB-abo" firstAttribute="centerX" secondItem="mqx-7M-zws" secondAttribute="centerX" constant="46" id="pE1-kR-RLM"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Xdr-Ah-sMA" secondAttribute="bottom" constant="13" id="u0D-Ez-Tek"/>
+                                                <constraint firstItem="Bfj-i7-gbB" firstAttribute="top" secondItem="hje-WB-abo" secondAttribute="bottom" constant="17.666666666666742" id="pUS-bd-nsd"/>
+                                                <constraint firstItem="FqY-p3-xPY" firstAttribute="leading" secondItem="Bfj-i7-gbB" secondAttribute="trailing" constant="17" id="rOy-jP-GA2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Xdr-Ah-sMA" secondAttribute="bottom" constant="1" id="u0D-Ez-Tek"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bfj-i7-gbB" secondAttribute="trailing" constant="72" id="zJK-yB-f9d"/>
+                                                <constraint firstItem="3gh-Nt-6Fs" firstAttribute="top" secondItem="Bfj-i7-gbB" secondAttribute="bottom" constant="1" id="zrf-Pg-zo4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artworkImageView" destination="sFA-2D-IB8" id="fLj-3u-YIH"/>
                                             <outlet property="favoriteButton" destination="FqY-p3-xPY" id="sO2-2r-SFf"/>
                                             <outlet property="genreLabel" destination="3gh-Nt-6Fs" id="l4Z-AV-Bej"/>
+                                            <outlet property="shortDescriptionText" destination="Bfj-i7-gbB" id="rAt-KN-tsa"/>
                                             <outlet property="titleLabel" destination="hje-WB-abo" id="dL7-Mr-49z"/>
                                             <outlet property="yearLabel" destination="Xdr-Ah-sMA" id="Flv-Vm-lBQ"/>
                                         </connections>

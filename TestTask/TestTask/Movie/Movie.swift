@@ -13,7 +13,7 @@ struct SearchResultDTO: Decodable {
 }
 
 enum CodingKeys: String, CodingKey {
-    case artworkUrl100, trackId, trackName, releaseDate, primaryGenreName, previewUrl, longDescription
+    case artworkUrl100, trackId, trackName, releaseDate, primaryGenreName, previewUrl, longDescription,shortDescription
 }
 
 // Data Transfer Object
@@ -26,6 +26,7 @@ struct MovieDTO: Decodable {
     let previewUrl: URL?
     let trackViewUrl: URL
     let longDescription: String
+    let shortDescription: String?
 }
 
 struct Movie {
@@ -41,6 +42,7 @@ struct Movie {
     let primaryGenreName: String
     let previewUrl: URL?
     let longDescription: String
+    let shortDescription: String?
     let isFavorite: Bool
     let trackViewUrl: URL
 
@@ -52,6 +54,7 @@ struct Movie {
         self.previewUrl = dto.previewUrl
         self.trackViewUrl = dto.trackViewUrl
         self.longDescription = dto.longDescription
+        self.shortDescription = dto.shortDescription
 
         self.releaseDate = Self.getFormattedDate(from: dto.releaseDate)
 
