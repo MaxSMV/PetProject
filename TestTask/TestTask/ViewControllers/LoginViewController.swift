@@ -12,14 +12,24 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     private let userDataService: UserDataServiceProtocol = UserDataService()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Looks for single or multiple taps.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
     }
-
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
         // looks like user is already logged in
         if userDataService.email != nil {
             self.performSegue(withIdentifier: "toHomeVC", sender: nil)
@@ -46,7 +56,7 @@ class LoginViewController: UIViewController {
             self.makeAlert(title: "Error", message: "Email or Password")
             return
         }
-
+        
         userDataService.save(email: email)
         userDataService.save(password: password)
         

@@ -13,12 +13,21 @@ class HomeViewController: UIViewController {
     
     private var movies: [Movie] = []
     private let favoritesService = FavoritesService()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Looks for single or multiple taps.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+        
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
@@ -45,14 +54,14 @@ class HomeViewController: UIViewController {
             do {
                 let result = try JSONDecoder().decode(SearchResultDTO.self, from: data)
                 let favoritesList = self.favoritesService.getIDs()
-
+                
                 DispatchQueue.main.async {
                     self.movies = result.results
                         .map { movieDTO in
                             let isFavorite = favoritesList.contains(movieDTO.trackId)
                             return Movie(dto: movieDTO, isFavorite: isFavorite)
                         }
-
+                    
                     self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
                 }
             } catch {
@@ -75,7 +84,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedMovie = movies[indexPath.row]
         let movieDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieDetailVC") as! MovieDetailViewController
